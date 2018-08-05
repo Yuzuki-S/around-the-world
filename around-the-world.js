@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', createEventListeners)
 var images;
+
 function createEventListeners (){
     images = document.getElementById("images");
     images.addEventListener("click", changeImage);
@@ -8,7 +9,7 @@ function createEventListeners (){
 }
 
 function changeImage () {
-   var multipleImages = Math.floor(Math.random()*17);
+   var multipleImages = Math.floor(Math.random()*18);
    var name = document.getElementById("name")
    if (multipleImages === 0){
        images.src = "./Images/Bolivia.jpg";
@@ -36,10 +37,10 @@ function changeImage () {
         name.innerHTML ="Japan";
     } else if (multipleImages ===8){
         images.src = "./Images/London.jpg";
-        name.innerHTML ="London";
+        name.innerHTML ="England";
     } else if (multipleImages ===9) {
         images.src = "./Images/Maldive.jpg";
-        name.innerHTML ="Maldive";
+        name.innerHTML ="Maldives";
     } else if (multipleImages ===10){
         images.src = "./Images/Netherland.jpg";
         name.innerHTML ="Netherland";
@@ -58,7 +59,13 @@ function changeImage () {
     } else if (multipleImages ===15){
         images.src = "./Images/Spain.jpg";
         name.innerHTML ="Spain"
-    } else {
+    } else if (multipleImages ===16) {
+        images.src ="./Images/Australia.jpg";
+        name.innerHTML ="Australia";
+    } else if (multipleImages ===16) {
+        images.src ="./Images/India.jpg";
+        name.innerHTML ="India";
+    }else {
         images.src = "./Images/USA.jpg";
         name.innerHTML ="USA";
     }
